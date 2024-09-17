@@ -15,18 +15,18 @@ var lyricsData = [
   { text: "Está dicho que es un hecho", time: 59 },
   { text: "No la pierdas, no hay derecho", time: 61 },
   { text: "No te olvides que la vida", time: 64 },
-  { text: "casi nunca está dormida", time: 68 },
+  { text: "Casi nunca está dormida", time: 68 },
   { text: "En ese bar tan desierto nos esperaba el encuentro", time: 93 },
-  { text: "Ella llegó en limusina amarilla por supuesto", time: 100 },
-  { text: "Él se acercó de repente la miro tan de frente", time: 108 },
-  { text: "Toda una vida soñada y no pudo decir nada", time: 116 },
-  { text: "At the time", time: 144 },
-  { text: "The whisper of birds", time: 148 },
-  { text: "Lonely before the sun cried", time: 153 },
-  { text: "Fell from the sky", time: 158 },
-  { text: "Like water drops", time: 164 },
-  { text: "Where I'm now? I don't know why", time: 169 },
-  { text: "Nice butterflies in my hands", time: 176 },
+  { text: "Ella llegó en limusina amarilla por supuesto", time: 98 },
+  { text: "Él se acercó de repente la miro tan de frente", time: 106 },
+  { text: "Toda una vida soñada y no pudo decir nada", time: 114 },
+  { text: "Ella sabía que él sabía que algún día pasaría", time: 124 },
+  { text: "Que vendría a buscarla con sus flores amarillas", time: 129 },
+  { text: "No te apures, no detengas el instante del encuentro", time: 136 },
+  { text: "Está dicho que es un hecho", time: 140 },
+  { text: "No la pierdas, no hay derecho", time: 142 },
+  { text: "No te olvides que la vida", time: 145 },
+  { text: "Casi nunca está dormida", time: 149 },
   { text: "Too much light for twilight", time: 183 },
   { text: "In the mood for the flowers", time: 188 },
   { text: "Love.", time: 140 },
@@ -64,7 +64,7 @@ function ocultarTitulo() {
     "fadeOut 3s ease-in-out forwards"; /* Duración y función de temporización de la desaparición */
   setTimeout(function () {
     titulo.style.display = "none";
-  }, 3000); // Espera 3 segundos antes de ocultar completamente
+  }, 2000); // Espera 3 segundos antes de ocultar completamente
 }
 
 // Llama a la función después de 216 segundos (216,000 milisegundos)
