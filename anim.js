@@ -1,10 +1,8 @@
-// Sincronizar las letras con la canción
 var audio = document.querySelector("audio");
 var lyrics = document.querySelector("#lyrics");
 
-// Array de objetos que contiene cada línea y su tiempo de aparición en segundos
 var lyricsData = [
-  { text: "Él la estaba esperando con una flor amarilla", time: 8 },
+  { text: "Flores amarillas", time: 8 },
   { text: "Él la estaba esperando con una flor amarilla", time: 16 },
   { text: "Ella lo estaba soñando con la luz en su pupila", time: 23 },
   { text: "Y el amarillo del Sol iluminaba la esquina", time: 30 },
@@ -50,48 +48,51 @@ var lyricsData = [
   { text: "Y se olvidaron de sus flores amarillas", time: 201 }
 ];
 
-// Animar las letras
+// Animar las letras usando requestAnimationFrame
 function updateLyrics() {
-  var time = Math.floor(audio.currentTime);
-  var currentLine = lyricsData.find(
-    (line) => time >= line.time - 2 && time < line.time + 4
-  );
+  var currentTime = audio.currentTime;
+  
+  // Busca la línea actual
+  var currentLine = lyricsData.find(line => currentTime >= line.time && currentTime < line.time + 4);
 
   if (currentLine) {
-    // Calcula la opacidad basada en el tiempo en la línea actual
-    var fadeInDuration = 0.5; // Duración del efecto de aparición en segundos
-    var fadeOutDuration = 0.5; // Duración del efecto de desaparición en segundos
+    // Calcula la opacidad para el efecto de aparición y desaparición
+    var fadeInDuration = 1; // 1 segundo para el fade-in
+    var fadeOutDuration = 1; // 1 segundo para el fade-out
     var opacity = 1;
 
-    if (time > currentLine.time + 4) {
-      opacity = Math.max(0, 1 - (time - (currentLine.time + 4)) / fadeOutDuration);
-    } else if (time < currentLine.time) {
-      opacity = 0;
-    } else {
-      opacity = Math.min(1, (time - (currentLine.time - 1)) / fadeInDuration);
+    if (currentTime < currentLine.time + fadeInDuration) {
+      // Fade-in
+      opacity = (currentTime - currentLine.time) / fadeInDuration;
+    } else if (currentTime > currentLine.time + 4 - fadeOutDuration) {
+      // Fade-out
+      opacity = 1 - (currentTime - (currentLine.time + 4 - fadeOutDuration)) / fadeOutDuration;
     }
 
-    // Aplica el efecto de aparición y desaparición
     lyrics.style.opacity = opacity;
     lyrics.innerHTML = currentLine.text;
   } else {
-    // Restablece la opacidad y el contenido si no hay una línea actual
+    // Oculta las letras cuando no hay línea actual
     lyrics.style.opacity = 0;
     lyrics.innerHTML = "";
   }
+
+  // Actualiza el frame
+  requestAnimationFrame(updateLyrics);
 }
 
-setInterval(updateLyrics, 100);
+// Inicia la sincronización cuando el audio comienza a reproducirse
+audio.addEventListener("play", function () {
+  requestAnimationFrame(updateLyrics);
+});
 
-// Función para ocultar el título después de 216 segundos
+// Ocultar el título después de 216 segundos
 function ocultarTitulo() {
   var titulo = document.querySelector(".titulo");
-  titulo.style.animation =
-    "fadeOut 3s ease-in-out forwards"; /* Duración y función de temporización de la desaparición */
+  titulo.style.animation = "fadeOut 3s ease-in-out forwards";
   setTimeout(function () {
     titulo.style.display = "none";
-  }, 2900); // Espera 3 segundos antes de ocultar completamente
+  }, 3000); // Ajusta a 3 segundos antes de ocultar
 }
 
-// Llama a la función después de 216 segundos (216,000 milisegundos)
 setTimeout(ocultarTitulo, 216000);
