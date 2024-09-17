@@ -4,7 +4,6 @@ var lyrics = document.querySelector("#lyrics");
 
 // Array de objetos que contiene cada línea y su tiempo de aparición en segundos
 var lyricsData = [
-  { text: "Flores amarillas", time: 8 },
   { text: "Él la estaba esperando con una flor amarilla", time: 16 },
   { text: "Ella lo estaba soñando con la luz en su pupila", time: 23 },
   { text: "Y el amarillo del Sol iluminaba la esquina", time: 30 },
@@ -54,13 +53,13 @@ var lyricsData = [
 function updateLyrics() {
   var time = Math.floor(audio.currentTime);
   var currentLine = lyricsData.find(
-    (line) => time >= line.time && time < line.time + 6
+    (line) => time >= line.time - 1 && time < line.time + 5
   );
 
   if (currentLine) {
     // Calcula la opacidad basada en el tiempo en la línea actual
-    var fadeInDuration = 0.1; // Duración del efecto de aparición en segundos
-    var opacity = Math.min(1, (time - currentLine.time) / fadeInDuration);
+    var fadeInDuration = 0.5; // Duración del efecto de aparición en segundos
+    var opacity = Math.min(1, (time - currentLine.time + 1) / fadeInDuration);
 
     // Aplica el efecto de aparición
     lyrics.style.opacity = opacity;
@@ -72,7 +71,7 @@ function updateLyrics() {
   }
 }
 
-setInterval(updateLyrics, 1000);
+setInterval(updateLyrics, 100);
 
 // Función para ocultar el título después de 216 segundos
 function ocultarTitulo() {
