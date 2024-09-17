@@ -4,6 +4,7 @@ var lyrics = document.querySelector("#lyrics");
 
 // Array de objetos que contiene cada línea y su tiempo de aparición en segundos
 var lyricsData = [
+  { text: "Él la estaba esperando con una flor amarilla", time: 8 },
   { text: "Él la estaba esperando con una flor amarilla", time: 16 },
   { text: "Ella lo estaba soñando con la luz en su pupila", time: 23 },
   { text: "Y el amarillo del Sol iluminaba la esquina", time: 30 },
@@ -18,50 +19,59 @@ var lyricsData = [
   { text: "No la pierdas, no hay derecho", time: 68 },
   { text: "No te olvides que la vida", time: 71 },
   { text: "Casi nunca está dormida", time: 74 },
-  { text: "En ese bar tan desierto nos esperaba el encuentro", time: 90 },
-  { text: "Ella llegó en limusina amarilla por supuesto", time: 97 },
-  { text: "Él se acercó de repente la miró tan de frente", time: 104 },
-  { text: "Toda una vida soñada y no pudo decir nada", time: 111 },
-  { text: "Ella sabía que él sabía", time: 118 },
-  { text: "Que algún día pasaría", time: 121 },
-  { text: "Que vendría a buscarla", time: 124 },
-  { text: "Con sus flores amarillas", time: 127 },
-  { text: "No te apures, no detengas", time: 133 },
-  { text: "El instante del encuentro", time: 136 },
-  { text: "Está dicho que es un hecho", time: 139 },
-  { text: "No la pierdas, no hay derecho", time: 142 },
-  { text: "No te olvides que la vida", time: 145 },
-  { text: "Casi nunca está dormida", time: 148 },
-  { text: "Flores amarillas", time: 155 },
-  { text: "Ella sabía que él sabía", time: 158 },
-  { text: "Que algún día pasaría", time: 161 },
-  { text: "Que vendría a buscarla", time: 164 },
-  { text: "Con sus flores amarillas", time: 167 },
-  { text: "No te apures, no detengas", time: 174 },
-  { text: "El instante del encuentro", time: 177 },
-  { text: "Está dicho que es un hecho", time: 180 },
-  { text: "No la pierdas, no hay derecho", time: 183 },
-  { text: "No te olvides que la vida", time: 186 },
-  { text: "Casi nunca está dormida", time: 189 },
-  { text: "Ella sabía que él sabía", time: 196 },
-  { text: "Él sabía, ella sabía", time: 199 },
-  { text: "Que él sabía, ella sabía", time: 202 },
-  { text: "Y se olvidaron de sus flores amarillas", time: 205 }
+  { text: "En ese bar tan desierto nos esperaba el encuentro", time: 83 },
+  { text: "Ella llegó en limusina amarilla por supuesto", time: 90 },
+  { text: "Él se acercó de repente la miró tan de frente", time: 97 },
+  { text: "Toda una vida soñada y no pudo decir nada", time: 104 },
+  { text: "Ella sabía que él sabía", time: 111 },
+  { text: "Que algún día pasaría", time: 114 },
+  { text: "Que vendría a buscarla", time: 117 },
+  { text: "Con sus flores amarillas", time: 120 },
+  { text: "No te apures, no detengas", time: 126 },
+  { text: "El instante del encuentro", time: 129 },
+  { text: "Está dicho que es un hecho", time: 132 },
+  { text: "No la pierdas, no hay derecho", time: 135 },
+  { text: "No te olvides que la vida", time: 138 },
+  { text: "Casi nunca está dormida", time: 141 },
+  { text: "Flores amarillas", time: 150 },
+  { text: "Ella sabía que él sabía", time: 153 },
+  { text: "Que algún día pasaría", time: 156 },
+  { text: "Que vendría a buscarla", time: 159 },
+  { text: "Con sus flores amarillas", time: 162 },
+  { text: "No te apures, no detengas", time: 168 },
+  { text: "El instante del encuentro", time: 171 },
+  { text: "Está dicho que es un hecho", time: 174 },
+  { text: "No la pierdas, no hay derecho", time: 177 },
+  { text: "No te olvides que la vida", time: 180 },
+  { text: "Casi nunca está dormida", time: 183 },
+  { text: "Ella sabía que él sabía", time: 192 },
+  { text: "Él sabía, ella sabía", time: 195 },
+  { text: "Que él sabía, ella sabía", time: 198 },
+  { text: "Y se olvidaron de sus flores amarillas", time: 201 }
 ];
 
 // Animar las letras
 function updateLyrics() {
   var time = Math.floor(audio.currentTime);
   var currentLine = lyricsData.find(
-    (line) => time >= line.time - 1 && time < line.time + 5
+    (line) => time >= line.time - 2 && time < line.time + 4
   );
 
   if (currentLine) {
     // Calcula la opacidad basada en el tiempo en la línea actual
     var fadeInDuration = 0.5; // Duración del efecto de aparición en segundos
-    var opacity = Math.min(1, (time - currentLine.time + 1) / fadeInDuration);
+    var fadeOutDuration = 0.5; // Duración del efecto de desaparición en segundos
+    var opacity = 1;
 
-    // Aplica el efecto de aparición
+    if (time > currentLine.time + 4) {
+      opacity = Math.max(0, 1 - (time - (currentLine.time + 4)) / fadeOutDuration);
+    } else if (time < currentLine.time) {
+      opacity = 0;
+    } else {
+      opacity = Math.min(1, (time - (currentLine.time - 1)) / fadeInDuration);
+    }
+
+    // Aplica el efecto de aparición y desaparición
     lyrics.style.opacity = opacity;
     lyrics.innerHTML = currentLine.text;
   } else {
