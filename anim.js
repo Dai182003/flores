@@ -64,7 +64,7 @@ function ocultarTitulo() {
     "fadeOut 3s ease-in-out forwards"; /* Duración y función de temporización de la desaparición */
   setTimeout(function () {
     titulo.style.display = "none";
-  }, 2000); // Espera 3 segundos antes de ocultar completamente
+  }, 2500); // Espera 3 segundos antes de ocultar completamente
 }
 
 // Llama a la función después de 216 segundos (216,000 milisegundos)
