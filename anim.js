@@ -4,14 +4,15 @@ var lyrics = document.querySelector("#lyrics");
 
 // Array de objetos que contiene cada línea y su tiempo de aparición en segundos
 var lyricsData = [
+  { text: "Flores Amarillas", time: 8 },
   { text: "Él la estaba esperando con una flor amarilla", time: 16 },
-  { text: "Ella lo estaba soñando con la luz en su pupila", time: 24 },
-  { text: "Y el amarillo del Sol iluminaba la esquina", time: 34 },
+  { text: "Ella lo estaba soñando con la luz en su pupila", time: 23 },
+  { text: "Y el amarillo del Sol iluminaba la esquina", time: 32 },
   { text: "Lo sentía tan cercano, lo sentía desde niña", time: 40 },
-  { text: "Like water drops", time: 33 },
-  { text: "Where I'm now? I don't know why", time: 41 },
-  { text: "Nice butterflies in my hands", time: 47 },
-  { text: "Too much light for twilight", time: 54 },
+  { text: "Ella sabía que él sabía", time: 47 },
+  { text: "Que algún día pasaría", time: 50 },
+  { text: "Que vendría a buscarla", time: 52 },
+  { text: "Con sus flores amarillas", time: 54 },
   { text: "In the mood for the flowers love", time: 59 },
   { text: "That vision", time: 67 },
   { text: "Really strong, blew my mind", time: 72 },
