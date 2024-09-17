@@ -7,7 +7,7 @@ var lyricsData = [
   { text: "Flores Amarillas", time: 8 },
   { text: "Él la estaba esperando con una flor amarilla", time: 16 },
   { text: "Ella lo estaba soñando con la luz en su pupila", time: 23 },
-  { text: "Y el amarillo del Sol iluminaba la esquina", time: 32 },
+  { text: "Y el amarillo del Sol iluminaba la esquina", time: 31 },
   { text: "Lo sentía tan cercano, lo sentía desde niña", time: 40 },
   { text: "Ella sabía que él sabía", time: 46 },
   { text: "Que algún día pasaría", time: 49 },
@@ -70,4 +70,4 @@ function ocultarTitulo() {
 }
 
 // Llama a la función después de 216 segundos (216,000 milisegundos)
-setTimeout(ocultarTitulo, 21600);
+setTimeout(ocultarTitulo, 2160);
