@@ -4,8 +4,8 @@ var lyrics = document.querySelector("#lyrics");
 
 // Array de objetos que contiene cada línea y su tiempo de aparición en segundos
 var lyricsData = [
-  { text: "Él la estaba esperando con una flor amarilla", time: 18 },
-  { text: "Ella lo estaba soñando con la luz en su pupila", time: 26 },
+  { text: "Él la estaba esperando con una flor amarilla", time: 16 },
+  { text: "Ella lo estaba soñando con la luz en su pupila", time: 24 },
   { text: "Y el amarillo del Sol iluminaba la esquina", time: 34 },
   { text: "Lo sentía tan cercano, lo sentía desde niña", time: 40 },
   { text: "Like water drops", time: 33 },
