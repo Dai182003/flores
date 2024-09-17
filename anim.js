@@ -10,11 +10,11 @@ var lyricsData = [
   { text: "Y el amarillo del Sol iluminaba la esquina", time: 31 },
   { text: "Lo sentía tan cercano, lo sentía desde niña", time: 40 },
   { text: "Ella sabía que él sabía que algún día pasaría", time: 46 },
-  { text: "Que vendría a buscarla con sus flores amarillas", time: 51 },
-  { text: "In the mood for the flowers love", time: 59 },
-  { text: "That vision", time: 67 },
-  { text: "Really strong, blew my mind", time: 72 },
-  { text: "Silence Let me see what it was", time: 78 },
+  { text: "Que vendría a buscarla con sus flores amarillas", time: 49 },
+  { text: "No te apures, no detengas el instante del encuentro", time: 59 },
+  { text: "Está dicho que es un hecho", time: 63 },
+  { text: "No la pierdas, no hay derecho", time: 65 },
+  { text: "No te olvides que la vida casi nunca está dormida", time: 68 },
   { text: "I only want to live in clouds", time: 83 },
   { text: "Where I'm now? I don't know why", time: 91 },
   { text: "Nice butterflies in my hands", time: 97 },
@@ -64,8 +64,8 @@ function ocultarTitulo() {
     "fadeOut 3s ease-in-out forwards"; /* Duración y función de temporización de la desaparición */
   setTimeout(function () {
     titulo.style.display = "none";
-  }, 1000); // Espera 3 segundos antes de ocultar completamente
+  }, 3000); // Espera 3 segundos antes de ocultar completamente
 }
 
 // Llama a la función después de 216 segundos (216,000 milisegundos)
-setTimeout(ocultarTitulo, 2160);
+setTimeout(ocultarTitulo, 216000);
