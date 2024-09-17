@@ -4,6 +4,7 @@ var lyrics = document.querySelector("#lyrics");
 
 // Array de objetos que contiene cada línea y su tiempo de aparición en segundos
 var lyricsData = [
+  { text: "Flores amarillas", time: 8 },
   { text: "Él la estaba esperando con una flor amarilla", time: 16 },
   { text: "Ella lo estaba soñando con la luz en su pupila", time: 23 },
   { text: "Y el amarillo del Sol iluminaba la esquina", time: 30 },
