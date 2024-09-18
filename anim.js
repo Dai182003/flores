@@ -4,7 +4,7 @@ var lyrics = document.querySelector("#lyrics");
 var lyricsData = [
   { text: "Flores amarillas", time: 8 },
   { text: "Él la estaba esperando con una flor amarilla", time: 17 },
-  { text: "Ella lo estaba soñando con la luz en su pupila", time: 24 },
+  { text: "Ella lo estaba soñando con la luz en su pupila", time: 25 },
   { text: "Y el amarillo del Sol iluminaba la esquina", time: 32 },
   { text: "Lo sentía tan cercano, lo sentía desde niña", time: 40 },
   { text: "Ella sabía que él sabía", time: 46 },
@@ -14,7 +14,7 @@ var lyricsData = [
   { text: "No te apures, no detengas, el instante del encuentro", time: 60 },
   { text: "Está dicho que es un hecho", time: 62 },
   { text: "No la pierdas, no hay derecho", time: 64 },
-  { text: "No te olvides que la vida", time: 69 },
+  { text: "No te olvides que la vida", time: 67 },
   { text: "Casi nunca está dormida", time: 74 },
   { text: "En ese bar tan desierto nos esperaba el encuentro", time: 93 },
   { text: "Ella llegó en limusina amarilla por supuesto", time: 101 },
