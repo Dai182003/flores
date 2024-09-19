@@ -27,22 +27,22 @@ var lyricsData = [
   { text: "No te apures, no detengas,el instante del encuentro", time: 137 },
   { text: "Está dicho que es un hecho", time: 139 },
   { text: "No la pierdas, no hay derecho", time: 141 },
-  { text: "No te olvides que la vida", time: 143 },
+  { text: "No te olvides que la vida", time: 144 },
   { text: "Casi nunca está dormida", time: 148 },
   { text: "Flores amarillas", time: 161 },
   { text: "Ella sabía que él sabía", time: 169 },
   { text: "Que algún día pasaría", time: 171 },
   { text: "Que vendría a buscarla", time: 173 },
   { text: "Con sus flores amarillas", time: 176 },
-  { text: "No te apures, no detengas, el instante del encuentro", time: 179 },
-  { text: "Está dicho que es un hecho", time: 180 },
-  { text: "No la pierdas, no hay derecho", time: 182 },
-  { text: "No te olvides que la vida", time: 184 },
-  { text: "Casi nunca está dormida", time: 189 },
-  { text: "Ella sabía que él sabía", time: 204 },
-  { text: "Él sabía, ella sabía", time: 206 },
-  { text: "Que él sabía, ella sabía", time: 208 },
-  { text: "Y se olvidaron de sus flores amarillas", time: 210 }
+  { text: "No te apures, no detengas, el instante del encuentro", time: 184 },
+  { text: "Está dicho que es un hecho", time: 186 },
+  { text: "No la pierdas, no hay derecho", time: 188 },
+  { text: "No te olvides que la vida", time: 190 },
+  { text: "Casi nunca está dormida", time: 195 },
+  { text: "Ella sabía que él sabía", time: 197 },
+  { text: "Él sabía, ella sabía", time: 199 },
+  { text: "Que él sabía, ella sabía", time: 201 },
+  { text: "Y se olvidaron de sus flores amarillas", time: 203 }
 ];
 
 // Animar las letras usando requestAnimationFrame
