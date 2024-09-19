@@ -92,4 +92,4 @@ function ocultarTitulo() {
   }, 3000); // Ajusta a 3 segundos antes de ocultar
 }
 
-setTimeout(ocultarTitulo, 216000);
+setTimeout(ocultarTitulo, 15000);
