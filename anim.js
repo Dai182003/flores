@@ -38,10 +38,10 @@ var lyricsData = [
   { text: "Está dicho que es un hecho", time: 184 },
   { text: "No la pierdas, no hay derecho", time: 186 },
   { text: "No te olvides que la vida", time: 189 },
-  { text: "Casi nunca está dormida", time: 195 },
+  { text: "Casi nunca está dormida", time: 194 },
   { text: "Ella sabía que él sabía", time: 197 },
-  { text: "Él sabía, ella sabía", time: 198 },
-  { text: "Que él sabía, ella sabía", time: 199 },
+  { text: "Él sabía, ella sabía", time: 199 },
+  { text: "Que él sabía, ella sabía", time: 201 },
   { text: "Y se olvidaron de sus flores amarillas", time: 206 }
 ];
 
