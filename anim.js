@@ -42,8 +42,8 @@ var lyricsData = [
   { text: "Ella sabía que él sabía", time: 198 },
   { text: "Él sabía, ella sabía", time: 200 },
   { text: "Que él sabía, ella sabía", time: 202 },
-  { text: "Y se olvidaron de sus flores amarillas", time: 206 }
-  { text: "Gracias por ver ;)", time: 210 }
+  { text: "Y se olvidaron de sus flores amarillas", time: 206 },
+  { text: "Gracias por ver ;)", time: 212 },
 ];
 
 // Animar las letras usando requestAnimationFrame
